@@ -19,16 +19,12 @@
         $("#add-gif").on("click", function(event) 
         {
           event.preventDefault();
-          alert("You pressed the button")
           var gif = $("#gif-input").val().trim();
           gifs.push(gif);
           renderButtons()
         });
 
         $(document).on('click', '.btn', function() {
-
-          alert('button pressed');
-
           var animal = $(this).attr("data-name");
 
           var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=pKKnOKpj1V4ts8EBV5d39K0S8UIPy9dO&q="+animal+"&limit=10&offset=0&rating=PG-13&lang=en";
